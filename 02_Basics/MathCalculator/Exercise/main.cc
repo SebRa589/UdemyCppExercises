@@ -18,10 +18,14 @@ int main()
     std::cout << "pi (calculated): " << pi_calculated << '\n';
     std::cout << "pi (correct): " << pi << '\n';
 
-    std::uint8_t dec = 0b10001110;
+    //std::uint8_t dec_1 = 0b10001110; --> uint8_t interpretiert alles automatisch als char und setzt die Werte laut ASCII Tabelle. Keine Ahnung warum. Mit int8_t oder uint16_t gehts.
+    std::uint16_t dec = 0;
+    std::cin >> dec;
+    std::cout << dec << "\n";
     print_dec_to_bin(dec);
 
     test_cases(); // This should not fail!
+    return 0;
 }
 
 void test_cases()
